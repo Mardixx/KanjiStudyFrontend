@@ -11,6 +11,7 @@ import { NgFor } from '@angular/common';
 })
 export class KanjiCardComponent {
   data: any = '';
+  status: any = '';
   constructor(private service : HTTPService) { }
 
   ngOnInit(): void {
@@ -22,4 +23,12 @@ export class KanjiCardComponent {
       this.data = data;
     })
   }
+
+  public deleteKanjiCard(kanjiCardId: number) {
+    console.log(kanjiCardId);
+    return this.service.deleteKanjiCard(kanjiCardId).subscribe(status => {
+      this.status = status;
+    });
+  }
+
 }

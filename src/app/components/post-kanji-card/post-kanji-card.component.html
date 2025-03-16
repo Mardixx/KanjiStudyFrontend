@@ -1,0 +1,21 @@
+<form method="post" #kanjiCardInfo="ngForm">
+    <div>
+        <div class="kanjiDiv">
+            <label for="kanji">Kanji:</label>
+            <input type="text" id="kanji" name="kanji" ngModel>
+        </div>
+        <div class="kanaDiv">
+            <label for="kana">Kana:</label>
+            <input type="text" id="kana" name="kana" ngModel>
+        </div>
+        <div class="translationDiv">
+            <label for="translation">Translation:</label>
+            <input type="text" id="translation" name="translation" ngModel>
+        </div>
+        <div class="useCaseDiv">
+            <label for="useCase">Use Case:</label>
+            <input type="text" id="useCase" name="useCase" ngModel>
+        </div>
+        <button type="button" (click)="onPostKanjiCard(kanjiCardInfo)">Add Kanji Card</button>
+    </div>
+</form>
